@@ -1,0 +1,41 @@
+<div class="d-flex flex-column margin-10vw main-div">
+  <div class="select-month-div d-flex flex-column">
+      <p class="select-month-sentence"> Sélectionnez un mois</p>
+      <select class="select-month-sentence-select">
+        <option  value="0">Sélectionnez un mois:</option>
+        <option (click)="changeMonth('Juin')" value="1">Juin 2022</option>
+        <option (click)="changeMonth('Juillet')" value="2">Juillet 2022</option>
+        <option (click)="changeMonth('Aout')" value="3">Aout 2022</option>
+        <option (click)="changeMonth('Septembre')" value="4">Septembre 2022 (Actuellement)</option>
+        <option (click)="changeMonth('Octobre')" value="5">Octobre 2022</option>
+        <option (click)="changeMonth('Novembre')" value="6">Novembre 2022</option>
+        <option (click)="changeMonth('Décembre')" value="7">Décembre 2022</option>
+  </select>
+  </div>
+
+  <div class="earnings-year d-flex flex-column">
+    <p class="net-earning">4180,00€</p>
+    <p class="year-of-eraning-sentence">Revenus pour les reservations de 2022</p>
+    <p class="year-of-eraning-sentence">Nombre total de  nuits: 76</p>
+    <p class="year-of-eraning-sentence">Meilleur mois de l'année: Juillet ({{months.Juillet.ca}}€)</p>
+  </div>
+
+  <div class="earnings-year d-flex flex-column" >
+    <p class="net-earning-month">Aout - {{months.Aout.ca}}€</p>
+    <p class="year-of-eraning-sentence">Revenus pour les reservations de Aout 2022</p>
+    <p class="year-of-eraning-sentence">Nombre total de  nuits: {{months.Aout.nights}}</p>
+  </div>
+
+  <div class="earnings-year d-flex flex-column" >
+    <p class="net-earning-month">Juillet - {{months.Juillet.ca}}€</p>
+    <p class="year-of-eraning-sentence">Revenus pour les reservations de Juillet 2022</p>
+    <p class="year-of-eraning-sentence">Nombre total de  nuits: {{months.Juillet.nights}}</p>
+  </div>
+
+  <div class="earnings-year d-flex flex-column" >
+    <p class="net-earning-month">Juin - {{months.Juin.ca}}€</p>
+    <p class="year-of-eraning-sentence">Revenus pour les reservations de Juin 2022</p>
+    <p class="year-of-eraning-sentence">Nombre total de  nuits: {{months.Juin.nights}}</p>
+  </div>
+
+</div>

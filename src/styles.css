@@ -1,0 +1,186 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+/*-----------
+-----All-----
+-----------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+}
+
+
+/*----------
+---Header---
+----------*/
+
+header {
+	position:fixed;
+	top:0;
+	width: 100%;
+	height: 62px;
+	font-family: Circular,Helvetica,Arial,sans-serif;
+	color: #484848;
+	background-color: #fff;
+	border: 1px solid #DCE0E0;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+}
+
+
+
+/*---airbnb-logo---*/
+
+	.logo {
+		width: 138px;
+		height: 61px;
+		padding: 15px 20px;
+		float: left;
+		border: 1px solid #DCE0E0;
+		border-top: none;
+		border-bottom-color: transparent;
+	}
+		.logo:hover{
+			background-color: #F5F5F5;
+			cursor: pointer;
+		}
+		.logo svg {
+			width: 100px;
+			height: 31px;
+		}
+
+
+
+
+
+/*----------------
+---Footer---
+----------------*/
+
+footer{
+	font-family: Circular,Helvetica,Arial,sans-serif;
+	margin-top: 300px;
+	width: 100%;
+	height: 470px;
+	background-image: url("https://a0.muscache.com/airbnb/static/footer/background-317dd7c2cb678ddbdb0a983d511cb9a0.png");
+	background-color: #2b2d2e;
+}
+.footer-content{
+	width: 940px;
+	margin: 0 auto;
+	padding-top: 50px;
+}
+.footer-content hr{
+	background: #555758;
+	margin-bottom: 27px;
+}
+.footer-row{
+	width: 100%;
+	height: 205px;
+	padding-left: 100px;
+	margin-bottom: 50px;
+}
+/*---selectors---*/
+
+.selectors{
+	float: left;
+	width: 250px;
+	height: 95px;
+	margin-right: 80px;
+}
+	.selectors select{
+		width: 100%;
+		height: 40px;
+		font-size: 16px;
+		padding: 10px;
+		background-color: #484848;
+		border: none;
+		border-radius: 3px;
+		color: #fff;
+	}
+	.language-selector{
+		margin-bottom: 15px;
+	}
+
+
+
+/*---lists---*/
+.lists{
+	float: left;
+}
+
+.lists ul{
+	color: #fff;
+	list-style: none;
+	float: left;
+	width: 160px;
+	height: 175px;
+}
+.lists ul h3{
+	margin-bottom: 22px;
+	font-size: 16px;
+}
+.lists ul li{
+	margin-bottom: 5px;
+	font-size: 14px;
+}
+
+.socialnetworks{
+	width: 100%;
+	height: 82px;
+	margin-bottom: 15px;
+}
+.socialnetworks h2{
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	margin-bottom: 25px;
+}
+.icons{
+	width: 343px;
+	height: 37px;
+  margin: 0 auto;
+}
+.icons div{
+	display: inline-block;
+	float: left;
+	width: 35px;
+	height: 35px;
+	border: 1px solid #fff;
+	border-radius: 100%;
+	padding: 7px;
+	margin-right: 16px;
+}
+.icons div:last-child{
+	margin-right: 0;
+}
+.icons div svg{
+	color: red;
+	width: 18px;
+	height: 18px;
+	color: #fff;
+}
+
+.copyright{
+	text-align: center;
+	color: #767676;
+	font-size: 14px;
+}
+
+
+.margin-10vw{
+  margin: 0 10vw;
+}
+
+
+.screen-booking-status{
+  width: 80vw;
+  height: auto;
+}
+
+.screen-100vw{
+  width: 100vw;
+  height: auto;
+}

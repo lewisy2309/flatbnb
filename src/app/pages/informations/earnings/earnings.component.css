@@ -1,0 +1,71 @@
+.main-div{
+  margin: 20px 35vw 0 10vh;
+}
+
+.select-month-sentence{
+  margin: 10px 0 !important;
+    overflow-wrap: break-word !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 1.375em !important;
+    color: rgb(72, 72, 72) !important;
+}
+
+.select-month-sentence-select {
+  font-size: var(--font-form-element-font-size, 16px) !important;
+    line-height: var(--font-form-element-line-height, 24px) !important;
+    letter-spacing: var(--font-form-element-letter-spacing, normal) !important;
+    font-family: var(--font-form-element-font-family, Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif) !important;
+    text-transform: var(--font-form-element-text-transform, undefined) !important;
+    color: var(--font-form-element-color, #484848) !important;
+    padding-top: var(--spacing-form-element-vertical, 11px) !important;
+    padding-bottom: var(--spacing-form-element-vertical, 11px) !important;
+    font-weight: var(--font-light-font-weight, normal) !important;
+    background-color: var(--color-clear, transparent) !important;
+    padding-left: var(--spacing-form-element-horizontal, 11px) !important;
+    padding-right: var(--spacing-select-arrow, 40px) !important;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.earnings-year{
+  margin-top: 8vh;
+  margin-left: 10px;
+}
+
+.net-earning{
+  margin: 0px !important;
+    overflow-wrap: break-word !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-weight: 800 !important;
+    line-height: 1.15789em !important;
+    color: rgb(72, 72, 72) !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+  font-size: 46px !important;
+    line-height: 1.13043em !important;
+}
+
+.year-of-eraning-sentence{
+  margin: 0px !important;
+  overflow-wrap: break-word !important;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.375em !important;
+  color: rgb(72, 72, 72) !important;
+}
+
+.net-earning-month{
+  margin: 0px !important;
+    overflow-wrap: break-word !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-weight: 800 !important;
+    line-height: 1.15789em !important;
+    color: rgb(72, 72, 72) !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+  font-size: 28px !important;
+    line-height: 1.13043em !important;
+}

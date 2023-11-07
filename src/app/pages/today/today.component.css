@@ -1,0 +1,40 @@
+a{
+  color: #000;
+  text-decoration: none!important;
+}
+
+.all-reservation{
+  text-decoration: underline!important;
+}
+
+.reservation-type-card{
+  min-height: 5vh;
+  min-width: fit-content;
+  padding: 4px 16px;
+  border-radius: 20px;
+  border: solid 1px #717171!important;
+  background: none;
+  font-size: 14px!important;
+  outline: none !important;
+  margin-top: 15px;
+}
+
+.reservation-types{
+  width: 60vw;
+  box-sizing: border-box;
+}
+
+.div-title{
+  margin-bottom: 3vh;
+}
+
+.img-advice{
+  width: 100vw;
+  height:auto;
+  margin: 10vh 0!important;
+  padding: 0!important;
+}
+
+.reservation-people{
+  margin-top: 5vh;
+}

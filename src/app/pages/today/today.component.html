@@ -1,0 +1,34 @@
+<div class="div-title d-flex justify-content-between margin-10vw">
+  <h3>Vos réservations</h3>
+
+  <a class="all-reservation">Toutes les réservations</a>
+</div>
+
+<div class="reservation-types d-flex flex-row justify-content-between flex-wrap margin-10vw">
+    <button class="reservation-type-card">
+        <a routerLink="/airbnb.com/hosting/uncoming-leaving" href="">Départs prochains (0) </a>
+    </button>
+
+    <button class="reservation-type-card">
+      <a routerLink="/airbnb.com/hosting/present-staying" href="">Séjour en cours (1) </a>
+    </button>
+
+    <button class="reservation-type-card">
+      <a routerLink="/airbnb.com/hosting/next-people-coming" href="">Arrivées prochaines (0) </a>
+    </button>
+
+    <button class="reservation-type-card">
+      <a routerLink="/airbnb.com/hosting/people-coming" href="">A venir (0) </a>
+    </button>
+
+    <button class="reservation-type-card">
+      <a routerLink="/airbnb.com/hosting/waiting-for-comments" href="">En attente de commentaires (0) </a>
+    </button>
+</div>
+
+<div class="reservation-people margin-10vw">
+  <router-outlet ></router-outlet>
+</div>
+
+
+<img class="img-advice" src="../../../assets/images/advices_for_hosts.PNG" alt="">
