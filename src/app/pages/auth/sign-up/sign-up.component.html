@@ -8,11 +8,11 @@
       <h1>Inscription</h1>
       <p>Rejoignez l'aventure maintenant! </p>
 
-      <form class="flex-c">
+      <form [formGroup]="signUpForm" class="flex-c">
         <div class="input-box">
           <span class="label">Nom</span>
           <div class=" flex-r input">
-            <input type="text" placeholder="nom">
+            <input formControlName="surname" type="text" placeholder="nom">
             <i class="fas fa-at"></i>
           </div>
         </div>
@@ -20,7 +20,15 @@
         <div class="input-box">
           <span class="label">Prénom</span>
           <div class=" flex-r input">
-            <input type="text" placeholder="Prénom">
+            <input formControlName="firstname" type="text" placeholder="Prénom">
+            <i class="fas fa-at"></i>
+          </div>
+        </div>
+
+        <div class="input-box">
+          <span class="label">Username</span>
+          <div class=" flex-r input">
+            <input formControlName="username" type="text" placeholder="username">
             <i class="fas fa-at"></i>
           </div>
         </div>
@@ -28,7 +36,7 @@
         <div class="input-box">
           <span class="label">E-mail</span>
           <div class=" flex-r input">
-            <input type="text" placeholder="name@abc.com">
+            <input formControlName="email" type="text" placeholder="name@abc.com">
             <i class="fas fa-at"></i>
           </div>
         </div>
@@ -36,7 +44,7 @@
         <div class="input-box">
           <span class="label">Numéro de téléphone</span>
           <div class=" flex-r input">
-            <input type="text" placeholder="0606060606">
+            <input formControlName="phoneNumber" type="text" placeholder="0606060606">
             <i class="fas fa-at"></i>
           </div>
         </div>
@@ -44,7 +52,7 @@
         <div class="input-box">
           <span class="label">Mot de passe</span>
           <div class="flex-r input">
-            <input type="password" placeholder="8+ (a, A, 1, #)">
+            <input formControlName="password" type="password" placeholder="8+ (a, A, 1, #)">
             <i class="fas fa-lock"></i>
           </div>
         </div>
@@ -52,12 +60,12 @@
         <div class="input-box">
           <span class="label">Répetez mot de passe</span>
           <div class="flex-r input">
-            <input type="password" placeholder="8+ (a, A, 1, #)">
+            <input formControlName="confirmPassword" type="password" placeholder="8+ (a, A, 1, #)">
             <i class="fas fa-lock"></i>
           </div>
         </div>
 
-        <button class="btn" >Inscription</button>
+        <button (click)="signUpClientAccount()" class="btn" >Inscription</button>
         <span class="extra-line">
           <span>Déjà inscrit?</span>
           <a href="#"  routerLink="/sign-up">Connectez vous</a>
