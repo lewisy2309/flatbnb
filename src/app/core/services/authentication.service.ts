@@ -90,7 +90,7 @@ export class AuthenticationService {
   }
   signIn(login: Login): Observable<boolean> {
 
-    let endpoint:string=environment.apiUrl + 'authentication/signin';
+    let endpoint:string=environment.apiUrl + 'login';
     return this.httpClient.post<LoginResponse>(endpoint,login)
       .pipe(
         map((data) => {
