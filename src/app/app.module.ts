@@ -25,6 +25,16 @@ import { EarningsComponent } from './pages/informations/earnings/earnings.compon
 import { SuperhostComponent } from './pages/informations/superhost/superhost.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { ChartEarningComponent } from './pages/informations/earnings/chart-earning/chart-earning.component';
+import { HomeComponent } from './pages/home/home.component';
+import { FooterUnloggedComponent } from './components/footer-unlogged/footer-unlogged.component';
+import { NgxWebstorageModule } from 'ngx-webstorage';
+import { HeaderUnloggedComponent } from './components/header-unlogged/header-unlogged.component';
+import { LoginComponent } from './pages/auth/login/login.component';
+import { SignInComponent } from './pages/auth/sign-in/sign-in.component';
+import { SignUpComponent } from './pages/auth/sign-up/sign-up.component';
+import { SignUpHostComponent } from './pages/auth/sign-up-host/sign-up-host.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -44,13 +54,24 @@ import { ChartEarningComponent } from './pages/informations/earnings/chart-earni
     EarningsComponent,
     SuperhostComponent,
     ChartEarningComponent,
+    HomeComponent,
+    FooterUnloggedComponent,
+    HeaderUnloggedComponent,
+    LoginComponent,
+    SignInComponent,
+    SignUpComponent,
+    SignUpHostComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule, // required animations module
     MaterialModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    NgxWebstorageModule.forRoot(),
     FlatpickrModule.forRoot(),
     CalendarModule.forRoot({
       provide: DateAdapter,

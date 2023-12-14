@@ -12,9 +12,17 @@ import { ProgressionComponent } from './pages/informations/progression/progressi
 import { SuperhostComponent } from './pages/informations/superhost/superhost.component';
 import { MessagesComponent } from './pages/messages/messages.component';
 import { TodayComponent } from './pages/today/today.component';
+import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/auth/login/login.component';
+import { SignUpComponent } from './pages/auth/sign-up/sign-up.component';
+import { SignUpHostComponent } from './pages/auth/sign-up-host/sign-up-host.component';
 
 const routes: Routes = [
-  {path: '', component:TodayComponent},
+  {path: '', component:HomeComponent},
+  {path: 'home', component:HomeComponent},
+  {path: 'login', component:LoginComponent},
+  {path: 'sign-up', component:SignUpComponent},
+  {path: 'sign-up/host', component:SignUpHostComponent},
   {path: 'airbnb.com/hosting', component:TodayComponent,
     children:[
       {path:'',component:UncomingLeavingComponent},

@@ -1,0 +1,43 @@
+<div class=" flex-r container">
+  <div class="flex-r login-wrapper">
+    <div class="login-text">
+      <div class="logo">
+        <span><i class="fab fa-speakap"></i></span>
+        <span>flatBnB</span>
+      </div>
+      <h1>Connexion</h1>
+      <p>Connectez vous et préparez sereinement votre prochain trip! </p>
+
+      <form [formGroup]="loginForm" class="flex-c">
+        <div class="input-box form-group mb-3">
+          <span class="label">Nom d'utilisateur</span>
+          <div class=" flex-r input">
+            <input formControlName="username" type="text" placeholder="username">
+            <i class="fas fa-at"></i>
+          </div>
+          <div class="invalid-feedback">
+            {{ username?.hasError('required') ? "Username requis" : "" }} {{ username?.hasError('minlength') ? "3 caractères minimum requis" : "" }} {{ username?.hasError('maxlength') ? "15 caractères maximum requis" : "" }}
+        </div>
+        </div>
+
+        <div class="input-box form-group mb-3">
+          <span class="label">mot de pase</span>
+          <div class="flex-r input">
+            <input formControlName="password" type="password" placeholder="8+ (a, A, 1, #)">
+            <i class="fas fa-lock"></i>
+          </div>
+          <div class="invalid-feedback">
+            {{ password?.hasError('required') ? "Mot de passe requis" : "" }} {{ password?.hasError('minlength') ? "8 caractères minimum requis" : "" }} {{ password?.hasError('maxlength') ? "20 caractères maximum requis" : "" }}
+        </div>
+        </div>
+
+        <button (click)="signIn()" class="btn" >Connexion</button>
+        <span class="extra-line">
+          <span>Vous n'avez pas encore de compte?</span>
+          <a href="#"  routerLink="/sign-up">Inscrivez vous</a>
+        </span>
+      </form>
+
+    </div>
+  </div>
+</div>
