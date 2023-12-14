@@ -1,5 +1,6 @@
 <!-- toolbar -->
-<app-header-unlogged></app-header-unlogged>
+<app-header-unlogged *ngIf="!(authService.isLoggedIn$ |async)"></app-header-unlogged>
+<app-header *ngIf="authService.isLoggedIn$ |async"></app-header>
 <main>
   <router-outlet></router-outlet>
 </main>
