@@ -26,7 +26,7 @@ export class TokenService {
   ) {}
 
   initLocalStorageValues(data: LoginResponse) {
-    this.localStorage.store(TOKEN_KEY, data.accessToken);
+    this.localStorage.store(TOKEN_KEY, data.token);
     this.localStorage.store(REFRESH_TOKEN_KEY, data.refreshToken);
     this.localStorage.store(DATE_EXPIRATION_KEY, data.expirationDate);
   }
