@@ -71,7 +71,7 @@ export class SignUpComponent implements OnInit {
 
   signUpClientAccount(): void {
     this.retrieveUserInfos();
-    // console.log(this.user)
+    console.log(this.user)
     this.authenticationService.createClientAccount(this.user).subscribe(
       (data) => {
         this.isSuccessful = true;
@@ -80,7 +80,7 @@ export class SignUpComponent implements OnInit {
           'Vous avez bine été inscrit vous pouvez dès à présent vous connecter';
       },
       (err) => {
-        this.errorMessage = err.error.errors[0];
+        // this.errorMessage = err.error.errors[0];
         this.isSignUpFailed = true;
       }
     );

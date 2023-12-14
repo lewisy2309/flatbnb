@@ -149,8 +149,8 @@ export class AuthenticationService {
           }
   }
 
-  createClientAccount(user: UserCreation): Observable<any> {
-    let endpoint:string=environment.apiUrl + 'authentication/clients/signup';
+  createClientAccount(user: UserCreation) {
+    let endpoint:string=environment.apiUrl + 'users/new';
       return this.httpClient.post(endpoint,user);
 
   }
