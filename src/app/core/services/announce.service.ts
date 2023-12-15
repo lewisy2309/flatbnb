@@ -24,7 +24,7 @@ export class AnnounceService {
   }
 
   searchAnnouceByDate(checkInDate:string,checkOutDate:string){
-    return this.http.get<Array<any>>(environment.apiUrl+"announces/announces-without-reservation/"+checkInDate+"/"+checkOutDate);
+    return this.http.get<Array<any>>(environment.apiUrl+"announces/announces-without-reservations/"+checkInDate+"/"+checkOutDate);
   }
 
   searchAnnounceByCityAndDate(city:string,checkInDate:string,checkOutDate:string){
