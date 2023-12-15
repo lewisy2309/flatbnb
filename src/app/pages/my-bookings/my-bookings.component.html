@@ -1,1 +1,13 @@
-<p>my-bookings works!</p>
+
+<h1>Mes réservations</h1>
+<ol style="--length: 5" role="list">
+
+	<li *ngFor="let booking of bookings" style="--i: 1">
+		<h3>Du {{booking?.checkInDate}} au {{booking?.checkInDate}}</h3>
+		<p>total: {{booking?.totalBooking}}</p>
+		<p>prix à la nuit: {{booking?.priceByNight}}</p>
+		<p>prix à la nuit: {{booking?.numberOfNight}}</p>
+		<p>statut: {{booking?.status}}</p>
+	</li>
+
+</ol>

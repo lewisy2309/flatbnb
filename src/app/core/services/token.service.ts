@@ -58,6 +58,11 @@ export class TokenService {
     return this.decodedToken ? this.decodedToken['userid'] : null;
   }
 
+  getUsername() {
+    this.decodeToken();
+    return this.decodedToken ? this.decodedToken['username'] : null;
+  }
+
   getToken(): string {
     return this.localStorage.retrieve('accessToken');
   }
