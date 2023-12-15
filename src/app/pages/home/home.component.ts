@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AnnounceService } from 'src/app/core/services/announce.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  announces:Array<any>=[]
+  constructor(private router:Router,private announceService: AnnounceService) { }
 
   ngOnInit(): void {
+    this.getAllAnnouces();
+  }
+
+  getAllAnnouces(){
+    this.announceService.getAllAnnounces().subscribe((announces)=>{
+      this.announces=announces
+    })
+  }
+
+  goToAnnounce(announceId: string){
+    this.router.navigateByUrl('/announces/'+announceId)
   }
 
 }

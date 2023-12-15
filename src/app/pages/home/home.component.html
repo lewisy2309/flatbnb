@@ -53,28 +53,15 @@
 		<div class="prices">
 
 			<h3>Explorez nos choix</h3>
-
-			<div class="img"><img src="https://a2.muscache.com/im/pictures/6152848/b04eddeb_original.jpg?aki_policy=x_medium">
-				<div class="price-stamp">85€</div>
-				<div class="description">
-					<h4>Loft Studio dans le centre</h4>
-				</div>
-			</div>
-
-			<div class="img"><img src="https://a2.muscache.com/im/pictures/34792065/bae84a3f_original.jpg?aki_policy=x_medium">
-				<div class="price-stamp">105€</div>
-				<div class="description">
-					<h4>Suite avec vue</h4>
-				</div>
-			</div>
-
-			<div class="img"><img src="https://a2.muscache.com/im/pictures/1faf9a4c-f839-44da-bd37-65ddc928379e.jpg?aki_policy=x_medium">
-				<div class="price-stamp">145€</div>
-				<div class="description">
-					<h4>Villa avec piscine privée, vue 180°</h4>
-				</div>
-			</div>
-
+      <ng-template *ngFor="let announce of announces|slice:0:6" >
+        <div (click)="goToAnnounce(announce.id)" class="img">
+          <img alt="photo-annnouce" src="https://a2.muscache.com/im/pictures/6152848/b04eddeb_original.jpg?aki_policy=x_medium">
+          <div class="price-stamp">{{announce?.priceByNight}}€</div>
+          <div class="description">
+            <h4>{{announce?.name}}</h4>
+          </div>
+        </div>
+      </ng-template>
 		</div>
 
 		<hr>
