@@ -24,7 +24,7 @@ const routes: Routes = [
   {path: 'login', component:LoginComponent},
   {path: 'sign-up', component:SignUpComponent},
   {path: 'sign-up/host', component:SignUpHostComponent},
-  {path: 'annouce/:announceId', component:AnnounceComponent},
+  {path: 'announces/:announceId', component:AnnounceComponent},
   {path: 'airbnb.com/hosting', component:TodayComponent,
     children:[
       {path:'',component:UncomingLeavingComponent},

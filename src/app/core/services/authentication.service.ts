@@ -156,7 +156,7 @@ export class AuthenticationService {
   }
 
   createHostAccount(user: UserCreation): Observable<any> {
-    let endpoint:string=environment.apiUrl + 'authentication/hosts/signup';
+    let endpoint:string=environment.apiUrl + 'users/new/host';
     return this.httpClient.post(endpoint,user);
 
   }
