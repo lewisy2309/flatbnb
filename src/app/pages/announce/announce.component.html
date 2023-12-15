@@ -27,7 +27,6 @@
     <!-- card right -->
     <div class = "product-content">
       <h2 class = "product-title">{{announce?.name}}</h2>
-      <a href = "#" class = "product-link">visit nike store</a>
       <div class = "product-rating">
         <i class = "fas fa-star"></i>
         <i class = "fas fa-star"></i>
@@ -43,14 +42,11 @@
       </div>
 
       <div class = "product-detail">
-        <h2>about this item: </h2>
+        <h2>à propos du logement: </h2>
         <p>{{announce?.description}}</p>
         <ul>
-          <li>Color: <span>Black</span></li>
-          <li>Available: <span>in stock</span></li>
-          <li>Category: <span>Shoes</span></li>
-          <li>Shipping Area: <span>All over the world</span></li>
-          <li>Shipping Fee: <span>Free</span></li>
+          <li>Adresse: <span>{{announce?.address}}</span></li>
+          <li>Ville: <span>{{announce?.city?.name}}</span></li>
         </ul>
       </div>
 

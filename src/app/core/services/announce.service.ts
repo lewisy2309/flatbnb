@@ -19,16 +19,16 @@ export class AnnounceService {
     return this.http.get(environment.apiUrl+"announces/"+announceId);
   }
 
-  searchAnnouceByCity(city:string){
-    return this.http.get(environment.apiUrl+"announces/announces-by-city/"+city);
+  searchAnnounceByCity(city:string){
+    return this.http.get<Array<any>>(environment.apiUrl+"announces/announces-by-city/"+city);
   }
 
   searchAnnouceByDate(checkInDate:string,checkOutDate:string){
-    return this.http.get(environment.apiUrl+"announces/announces-without-reservation/"+checkInDate+"/"+checkOutDate);
+    return this.http.get<Array<any>>(environment.apiUrl+"announces/announces-without-reservation/"+checkInDate+"/"+checkOutDate);
   }
 
   searchAnnounceByCityAndDate(city:string,checkInDate:string,checkOutDate:string){
-    return this.http.get(environment.apiUrl+"announces/search/"+city+"/"+checkInDate+"/"+checkOutDate);
+    return this.http.get<Array<any>>(environment.apiUrl+"announces/search/"+city+"/"+checkInDate+"/"+checkOutDate);
   }
 }
 
