@@ -60,7 +60,7 @@ export class AnnounceComponent implements OnInit {
     var str = new Date().setSeconds(0,0);
     var dt = new Date(str).toISOString();
     this.bookingCreation.bookingDate=dt;
-    this.bookingCreation.numberOfNight=this.calculateDiff(this.bookingForm.value.checkInDate,this.bookingForm.value.checkOutDate);
+    // this.bookingCreation.numberOfNight=this.calculateDiff(this.bookingForm.value.checkInDate,this.bookingForm.value.checkOutDate);
     this.bookingCreation.priceByNigth=this.announce.priceByNigth;
     this.bookingCreation.status="réservé";
     this.bookingCreation.announce=Number(this.announceId);
