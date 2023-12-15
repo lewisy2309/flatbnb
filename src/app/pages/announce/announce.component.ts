@@ -54,7 +54,7 @@ export class AnnounceComponent implements OnInit {
     })
   }
 
-  bookAnnounce(){
+  bookAnnounce(priceByNigth:any){
     this.bookingCreation.checkInDate = this.bookingForm.value.checkInDate;
     this.bookingCreation.checkOutDate = this.bookingForm.value.checkOutDate;
     var str = new Date().setSeconds(0,0);
@@ -62,8 +62,7 @@ export class AnnounceComponent implements OnInit {
     this.bookingCreation.bookingDate=dt;
     this.bookingCreation.numberOfNight=this.calculateDiff(this.bookingForm.value.checkInDate,this.bookingForm.value.checkOutDate);
     let numberOfNight=this.calculateDiff(this.bookingForm.value.checkInDate,this.bookingForm.value.checkOutDate);
-    this.bookingCreation.priceByNigth=Number(this.announce.priceByNigth);
-    let priceByNigth=Number(this.announce.priceByNigth);
+    this.bookingCreation.priceByNigth=Number(priceByNigth);
     let totalBooking=numberOfNight*priceByNigth
     this.bookingCreation.totalBooking=totalBooking;
     this.bookingCreation.status="réservé";
