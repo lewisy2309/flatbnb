@@ -30,7 +30,7 @@ export class AnnounceComponent implements OnInit {
   myDate = new Date();
   date:string="";
   userId:any;
-  constructor(private tokenService:TokenService,private datePipe: DatePipe,private router:Router,private announceService:AnnounceService,private activatedRoute: ActivatedRoute) {
+  constructor(private tokenService:TokenService,private router:Router,private announceService:AnnounceService,private activatedRoute: ActivatedRoute) {
     this.bookingCreation={
       checkInDate:"",
       checkOutDate:"",
