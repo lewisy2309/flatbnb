@@ -17,11 +17,8 @@ export class HomeComponent implements OnInit {
   }
 
   getAllAnnouces(){
-    console.log("ljkfklf")
     this.announceService.getAllAnnounces().subscribe((announces:Array<any>)=>{
       this.announces=announces
-      console.log(announces)
-      console.log(this.announces)
     })
   }
 
