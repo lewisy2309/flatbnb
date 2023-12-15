@@ -36,6 +36,7 @@ import { SignUpHostComponent } from './pages/auth/sign-up-host/sign-up-host.comp
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AnnounceComponent } from './pages/announce/announce.component';
+import { MyBookingsComponent } from './pages/my-bookings/my-bookings.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { AnnounceComponent } from './pages/announce/announce.component';
     SignUpComponent,
     SignUpHostComponent,
     AnnounceComponent,
+    MyBookingsComponent,
 
   ],
   imports: [

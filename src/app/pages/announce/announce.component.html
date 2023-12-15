@@ -53,10 +53,26 @@
       </div>
 
       <div class = "purchase-info">
-        <input type = "number" min = "0" value = "1">
-        <button type = "button" class = "btn">
-          Reserver <i class = "fas fa-shopping-cart"></i>
-        </button>
+        <form [formGroup]="bookingForm" action="post">
+
+            <div class="checks-input">
+
+              <input formControlName="checkInDate" class="check-in" type="date" id="start" name="trip-start"  min="2023-12-15" max="2026-12-31"			placeholder="Arrivée">
+
+              <svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+                <path d="M0 0h24v24H0z" fill="none"/>
+                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+              </svg>
+
+              <input formControlName="checkOutDate" class="check-out" type="date" id="start" name="trip-start" min="2023-12-16" max="2026-12-31" placeholder="Départ">
+
+            </div>
+
+          <button type = "button" class = "btn">
+            Reserver <i class = "fas fa-shopping-cart"></i>
+          </button>
+        </form>
+
       </div>
 
       <div class = "social-links">
