@@ -60,8 +60,9 @@ export class AnnounceComponent implements OnInit {
     var str = new Date().setSeconds(0,0);
     var dt = new Date(str).toISOString();
     this.bookingCreation.bookingDate=dt;
-    // this.bookingCreation.numberOfNight=this.calculateDiff(this.bookingForm.value.checkInDate,this.bookingForm.value.checkOutDate);
+    this.bookingCreation.numberOfNight=this.calculateDiff(this.bookingForm.value.checkInDate,this.bookingForm.value.checkOutDate);
     this.bookingCreation.priceByNigth=this.announce.priceByNigth;
+    this.bookingCreation.totalBooking=this.announce.priceByNigth*this.bookingCreation.numberOfNight;
     this.bookingCreation.status="réservé";
     this.bookingCreation.announce=Number(this.announceId);
     this.bookingCreation.user=Number(this.announceId);
@@ -75,8 +76,9 @@ export class AnnounceComponent implements OnInit {
   }
 
 
-  calculateDiff(checkingDate:Date,checkOutDate:Date){
-
-    return Math.floor((Date.UTC(checkingDate.getFullYear(), checkingDate.getMonth(), checkingDate.getDate()) - Date.UTC(checkOutDate.getFullYear(), checkOutDate.getMonth(), checkOutDate.getDate()) ) /(1000 * 60 * 60 * 24));
+  calculateDiff(checkingDate:string,checkOutDate:string){
+    let date1 = new Date(checkingDate);
+    let date2= new Date(checkOutDate)
+    return Math.floor((Date.UTC(date1.getFullYear(), date1.getMonth(), date1.getDate()) - Date.UTC(date2.getFullYear(), date2.getMonth(), date2.getDate()) ) /(1000 * 60 * 60 * 24));
   }
 }
