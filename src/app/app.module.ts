@@ -35,6 +35,7 @@ import { SignUpComponent } from './pages/auth/sign-up/sign-up.component';
 import { SignUpHostComponent } from './pages/auth/sign-up-host/sign-up-host.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AnnounceComponent } from './pages/announce/announce.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { HttpClientModule } from '@angular/common/http';
     SignInComponent,
     SignUpComponent,
     SignUpHostComponent,
+    AnnounceComponent,
 
   ],
   imports: [

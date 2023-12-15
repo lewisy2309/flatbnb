@@ -16,6 +16,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { SignUpComponent } from './pages/auth/sign-up/sign-up.component';
 import { SignUpHostComponent } from './pages/auth/sign-up-host/sign-up-host.component';
+import { AnnounceComponent } from './pages/announce/announce.component';
 
 const routes: Routes = [
   {path: '', component:HomeComponent},
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'login', component:LoginComponent},
   {path: 'sign-up', component:SignUpComponent},
   {path: 'sign-up/host', component:SignUpHostComponent},
+  {path: 'annouce/:announceId', component:AnnounceComponent},
   {path: 'airbnb.com/hosting', component:TodayComponent,
     children:[
       {path:'',component:UncomingLeavingComponent},

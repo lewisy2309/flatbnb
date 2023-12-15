@@ -7,7 +7,7 @@ import { AuthenticationService } from './core/services/authentication.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'airbnb.com';
+  title = 'flatBnb';
 
   constructor(
     public authService: AuthenticationService){
