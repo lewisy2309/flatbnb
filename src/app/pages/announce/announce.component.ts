@@ -61,8 +61,11 @@ export class AnnounceComponent implements OnInit {
     var dt = new Date(str).toISOString();
     this.bookingCreation.bookingDate=dt;
     this.bookingCreation.numberOfNight=this.calculateDiff(this.bookingForm.value.checkInDate,this.bookingForm.value.checkOutDate);
-    this.bookingCreation.priceByNigth=this.announce.priceByNigth;
-    this.bookingCreation.totalBooking=this.announce.priceByNigth*this.bookingCreation.numberOfNight;
+    let numberOfNight=this.calculateDiff(this.bookingForm.value.checkInDate,this.bookingForm.value.checkOutDate);
+    this.bookingCreation.priceByNigth=Number(this.announce.priceByNigth);
+    let priceByNigth=Number(this.announce.priceByNigth);
+    let totalBooking=numberOfNight*priceByNigth
+    this.bookingCreation.totalBooking=totalBooking;
     this.bookingCreation.status="réservé";
     this.bookingCreation.announce=Number(this.announceId);
     this.bookingCreation.user=Number(this.announceId);
@@ -79,6 +82,6 @@ export class AnnounceComponent implements OnInit {
   calculateDiff(checkingDate:string,checkOutDate:string){
     let date1 = new Date(checkingDate);
     let date2= new Date(checkOutDate)
-    return Math.floor((Date.UTC(date1.getFullYear(), date1.getMonth(), date1.getDate()) - Date.UTC(date2.getFullYear(), date2.getMonth(), date2.getDate()) ) /(1000 * 60 * 60 * 24));
+    return Math.floor((Date.UTC(date2.getFullYear(), date2.getMonth(), date2.getDate()) - Date.UTC(date1.getFullYear(), date1.getMonth(), date1.getDate()) ) /(1000 * 60 * 60 * 24));
   }
 }
